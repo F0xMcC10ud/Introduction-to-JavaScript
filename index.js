@@ -126,13 +126,13 @@ function hungryDog(dogWeight, dogAge){
     return dogWeight * .02;
   } else if (dogAge >= 2/12 && dogAge < 4/12) {
     return dogWeight * .10;
-  } else if (dogAge >= 4/12 && dogAge < 7/12) {
+  } else if (dogAge >= 4/12 && dogAge < 0.583) {
     return dogWeight * .05; 
-  } else if (dogAge >= 7/12 && dogAge < 1) {
+  } else if (dogAge >= 0.583) {
     return dogWeight * .04;
   }
 }
-//console.log(hungryDog(5, 2));
+console.log(hungryDog(4,0.583));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
