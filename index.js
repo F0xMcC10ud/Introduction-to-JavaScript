@@ -116,13 +116,23 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 */  
 
 function hungryDog(dogWeight, dogAge){
-  if(dogAge > 1 && dogWeight <= 5) {
+  if(dogAge >= 1 && dogWeight <= 5) {
     return dogWeight * .05;
-  } else if (dogAge > 1 && dogWeight > 5 && dogWeight <= 10 ) {
+  } else if (dogAge >= 1 && dogWeight > 5 && dogWeight <= 10 ) {
     return dogWeight * .04;
-  } 
+  } else if (dogAge >= 1 && dogWeight > 10 && dogWeight <= 15) {
+    return dogWeight * .03;
+  } else if (dogAge >= 1 && dogWeight > 15) {
+    return dogWeight * .02;
+  } else if (dogAge >= 2/12 && dogAge < 4/12) {
+    return dogWeight * .10;
+  } else if (dogAge >= 4/12 && dogAge < 7/12) {
+    return dogWeight * .05; 
+  } else if (dogAge >= 7/12) {
+    return dogWeight * .04;
+  }
 }
-console.log(hungryDog(5, 2));
+//console.log(hungryDog(5, 2));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -149,7 +159,31 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 function game(user, computer){
-  /*add your code here*/
+  if (user === "paper") {
+    if (computer === "rock"){
+      return "you win!";
+    } else if (computer === 'scissors') {
+      return "you lose!";
+    } else {
+      return "it's a tie";
+    }
+  } else if (user === "rock") {
+    if (computer === "paper") {
+      return "you lose!";
+    } else if (computer === "scissors") {
+      return "you win!";
+    } else {
+      return "it's a tie";
+    }
+  } else {
+    if (computer === "paper") {
+      return "you win!";
+    } else if (computer === "rock") {
+      return "you lose!";
+    } else {
+      return "it's a tie";
+    }
+  }
 }
 
 
