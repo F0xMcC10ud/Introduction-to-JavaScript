@@ -128,7 +128,7 @@ function hungryDog(dogWeight, dogAge){
     return dogWeight * .10;
   } else if (dogAge >= 4/12 && dogAge < 7/12) {
     return dogWeight * .05; 
-  } else if (dogAge >= 7/12) {
+  } else if (dogAge >= 7/12 && dogAge < 1) {
     return dogWeight * .04;
   }
 }
@@ -199,8 +199,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(numKm){
+  return numKm * 0.621371;
 }
 
 
@@ -213,8 +213,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(numCm){
+  return numCm / 30.48
 }
 
 
@@ -229,8 +229,10 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong() {
+      for (let i = 5; i >= 0; i--) {
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
+      }
 }
 
 
@@ -249,8 +251,18 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if (score >= 90 && score <= 100) {
+    return "you got an A";
+  } else if (score >= 80 && score < 90) {
+    return "you got a B";
+  } else if (score >= 70 && score < 80) {
+    return "you got a C";
+  } else if (score >= 60 && score < 70) {
+    return "you got a D";
+  } else {
+    return "you got an F";
+  }
 }
 
 
